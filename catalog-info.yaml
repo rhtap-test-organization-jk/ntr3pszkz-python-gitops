@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ntr3pszkz-python-gitops
+  description: This is GitOps manifest for ntr3pszkz-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ntr3pszkz-python
+    janus-idp.io/tekton: ntr3pszkz-python
+    backstage.io/kubernetes-id: ntr3pszkz-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ntr3pszkz-python
